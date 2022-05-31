@@ -1,5 +1,9 @@
 package reverse_string
 
+import (
+	"strings"
+)
+
 func ReverseString(input string) (output string) {
 	sliceOfStrings := strings.Split(input, "\n")
 	reversedSingleString := ""
