@@ -5,17 +5,7 @@ import (
 )
 
 func ReverseString(input string) (output string) {
-	sliceOfStrings := strings.Split(input, "\n")
-	reversedSingleString := ""
-	for i := 0; i < len(sliceOfStrings); i++ {
-		if i > 0 {
-			output += "\n"
-		}
-		reversedSingleString = ""
-		for _, lit := range sliceOfStrings[i] {
-			reversedSingleString = string(lit) + reversedSingleString
-		}
-		output += reversedSingleString
-	}
+	for _, lit := range input {
+		output = string(lit) + output
 	return output
 }
